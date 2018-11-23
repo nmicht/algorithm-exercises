@@ -1,27 +1,16 @@
 function sortInsertion(A) {
   const N = A.length;
 
-  let boundary = 0;
-
-  for (let i = boundary + 1; i <= N -1; i++) {  // N-2
-    for (let j = 0; j <= boundary; j++) { //
-      if (A[j] > A[i]) {
-        insertBefore(A, i, j);
-        break;
-      }
+  for (let i = 1; i <= N - 1; i++) {
+    let tmp = A[i];
+    let x;
+    for (x = i-1; A[x] >= tmp; x--) {
+      A[x+1] = A[x];
     }
-    boundary++;
+    A[x+1] = tmp;
   }
 
   return A;
-}
-
-function insertBefore(A, i, j){
-  let tmp = A[i];
-  for (let x = i-1; x >= j; x--) {
-    A[x+1] = A[x];
-  }
-  A[j] = tmp;
 }
 
 // Tests
