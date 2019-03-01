@@ -11,3 +11,5 @@ Repository to save all the algorithms that I solved to practice algorithms, but 
 
 ## Language lessons learned
 - JavaScript sort is made for strings, for numbers is required to do a subtraction
+- In Python avoid pop and try to access directly to the element, that improves performance a lot
+- Python for-in does not include "end"
