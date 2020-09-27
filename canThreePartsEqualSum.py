@@ -33,3 +33,8 @@ class Solution:
                 continue
         
         return False
+
+# improvements
+# first full sum necessary?
+# searching the same number multiple times?
+# 
